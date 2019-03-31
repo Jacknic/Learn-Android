@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    数据绑定表达式
+    Layouts and binding expressions Android Developers
+    https://developer.android.google.cn/topic/libraries/data-binding/expressions
+    -->
+    <data>
+
+        <variable
+            name="user"
+            type="com.jacknic.android.databind.data.User" />
+
+        <variable
+            name="adapter"
+            type="com.jacknic.android.databind.UserListAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text='@{"用户名称:" + user.name}'
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="用户名:Jacknic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text='@{"年龄:" + user.age + (user.age >= 18 ? `已成年`:`未成年`)}'
+            app:layout_constraintStart_toEndOf="@+id/tvName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="年龄:18" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adapter="@{adapter}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:listitem="@layout/item_user" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
