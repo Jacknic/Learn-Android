@@ -12,8 +12,11 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".SimpleActivity"
-            android:label="简单使用" />
+            android:name=".ui.simple.SimpleActivity"
+            android:label="简单使用&amp;ListView绑定" />
+        <activity
+            android:name=".ui.recycler.RecyclerActivity"
+            android:label="RecyclerView普通绑定" />
         <activity android:name="com.jacknic.android.starter.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
