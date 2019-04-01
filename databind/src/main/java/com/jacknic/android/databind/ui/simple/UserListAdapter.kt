@@ -1,4 +1,4 @@
-package com.jacknic.android.databind
+package com.jacknic.android.databind.ui.simple
 
 import android.content.Context
 import android.view.LayoutInflater
