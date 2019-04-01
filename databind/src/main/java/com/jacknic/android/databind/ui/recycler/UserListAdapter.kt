@@ -14,6 +14,19 @@ import com.jacknic.android.databind.databinding.ItemUserBinding
  */
 class UserListAdapter(private val userList: List<User>) : RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
 
+    /**
+     * 点击事件接口
+     */
+    interface OnItemClickListener {
+        fun onItemClick(view: View, position: Int)
+    }
+
+    private var mOnItemClickListener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.mOnItemClickListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding.root)
@@ -25,6 +38,11 @@ class UserListAdapter(private val userList: List<User>) : RecyclerView.Adapter<U
         val user = userList[position]
         val binding = DataBindingUtil.findBinding<ItemUserBinding>(holder.itemView)
         binding?.user = user
+        mOnItemClickListener?.apply {
+            holder.itemView.setOnClickListener {
+                onItemClick(it, position)
+            }
+        }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
