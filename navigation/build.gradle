@@ -1,0 +1,7 @@
+apply from: '../app/build.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.jacknic.android.navigation"
+    }
+}
