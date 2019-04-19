@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -12,6 +13,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -25,8 +31,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$csl_version"
+    implementation "androidx.recyclerview:recyclerview:$recycler_version"
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation "androidx.test:runner:$runner_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    testImplementation 'androidx.test.ext:junit:1.1.0'
+    testImplementation "androidx.test:runner:$runner_version"
+    testImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation 'junit:junit:4.12'
 }
