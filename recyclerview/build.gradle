@@ -5,3 +5,6 @@ android {
         applicationId "com.jacknic.android.recyclerview"
     }
 }
+dependencies {
+    implementation project(':starter')
+}

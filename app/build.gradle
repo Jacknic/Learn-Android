@@ -14,10 +14,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    dataBinding {
-        enabled = true
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -33,8 +29,8 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$csl_version"
     implementation "androidx.recyclerview:recyclerview:$recycler_version"
 
+    androidTestImplementation 'junit:junit:4.12'
     testImplementation 'androidx.test.ext:junit:1.1.0'
     testImplementation "androidx.test:runner:$runner_version"
     testImplementation "androidx.test.espresso:espresso-core:$espresso_version"
-    androidTestImplementation 'junit:junit:4.12'
 }

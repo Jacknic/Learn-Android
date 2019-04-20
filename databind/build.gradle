@@ -4,6 +4,10 @@ android {
     defaultConfig {
         applicationId "com.jacknic.android.databind"
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {

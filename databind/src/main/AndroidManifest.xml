@@ -17,7 +17,7 @@
         <activity
             android:name=".ui.recycler.RecyclerActivity"
             android:label="RecyclerView普通绑定" />
-        <activity android:name="com.jacknic.android.starter.MainActivity">
+        <activity android:name="com.jacknic.android.starter.StarterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
