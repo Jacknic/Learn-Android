@@ -2,7 +2,6 @@ package com.jacknic.android.download
 
 import android.app.DownloadManager
 import android.app.DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED
-import android.content.ContentProvider
 import android.content.Context
 import android.database.ContentObserver
 import android.net.Uri
@@ -11,7 +10,6 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import org.xmlpull.v1.XmlPullParser
 
 /**
  * 文件下载
