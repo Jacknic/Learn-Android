@@ -12,6 +12,7 @@ buildscript {
         csl_version = '1.1.3'
         runner_version = '1.1.1'
         espresso_version = '3.1.1'
+        navi_version = '1.0.0'
     }
 
     repositories {
@@ -21,6 +22,8 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$navi_version"
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

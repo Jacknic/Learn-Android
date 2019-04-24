@@ -1,7 +1,13 @@
 apply from: '../app/build.gradle'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     defaultConfig {
         applicationId "com.jacknic.android.navigation"
     }
+}
+
+dependencies {
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navi_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navi_version"
 }
