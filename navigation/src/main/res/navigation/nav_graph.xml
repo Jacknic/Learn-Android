@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nav_graph.xml">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/startPage">
 
+    <fragment
+        android:id="@+id/startPage"
+        android:name="com.jacknic.android.navigation.page.StarterPage"
+        android:label="@string/starter"
+        tools:layout="@layout/starter_page">
+        <action
+            android:id="@+id/action_starterPage_to_loginPage"
+            app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_startPage_to_homePage"
+            app:destination="@id/homePage"
+            app:popUpTo="@id/startPage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.jacknic.android.navigation.page.LoginPage"
+        android:label="@string/login"
+        tools:layout="@layout/login_page">
+        <action
+            android:id="@+id/action_loginPage_to_homePage"
+            app:destination="@id/homePage"
+            app:popUpTo="@id/startPage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.jacknic.android.navigation.page.HomePage"
+        android:label="@string/home"
+        tools:layout="@layout/home_page">
+        <action
+            android:id="@+id/action_homePage_to_startPage"
+            app:destination="@id/startPage"
+            app:popUpTo="@+id/homePage"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
