@@ -10,7 +10,7 @@ android {
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -28,7 +28,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat_version"
 
     testImplementation 'junit:junit:4.12'
-    testImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation "androidx.test:runner:$runner_version"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+//    androidTestImplementation "androidx.test:runner:$runner_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 }
