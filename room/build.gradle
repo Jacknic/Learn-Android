@@ -1,0 +1,12 @@
+apply from: '../app/build.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.jacknic.android.room"
+    }
+}
+
+dependencies {
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+}
