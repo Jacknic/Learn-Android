@@ -10,8 +10,9 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "note")
 data class Note(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id") val id: Long = 0,
-    val title: String,
-    val content: String
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "id") var id: Long = 0,
+        var title: String,
+        var content: String,
+        var time: Long = System.currentTimeMillis()
 )
