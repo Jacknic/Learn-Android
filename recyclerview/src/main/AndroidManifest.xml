@@ -10,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".SimpleActivity"
+            android:name=".simple.SimpleActivity"
             android:label="基本用法" />
         <activity android:name="com.jacknic.android.starter.StarterActivity">
             <intent-filter>
