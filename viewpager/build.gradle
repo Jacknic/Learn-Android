@@ -1,0 +1,12 @@
+apply from: '../app/build.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.jacknic.android.viewpager"
+    }
+}
+
+dependencies {
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+}

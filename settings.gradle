@@ -1,1 +1,1 @@
-include ':app', ':download', ':intent', ':recyclerview', ':databind', ':starter', ':navigation', ':room'
+include ':app', ':download', ':intent', ':recyclerview', ':databind', ':starter', ':navigation', ':room', ':viewpager'
