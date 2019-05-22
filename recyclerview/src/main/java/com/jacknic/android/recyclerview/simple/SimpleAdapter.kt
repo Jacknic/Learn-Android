@@ -1,26 +1,17 @@
 package com.jacknic.android.recyclerview.simple
 
-import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.jacknic.android.recyclerview.TextViewHolder
+import com.jacknic.android.recyclerview.TextViewHolder.Companion.createViewHolder
 
-class SimpleAdapter(private val list: List<String>) : RecyclerView.Adapter<SimpleAdapter.VHolder>() {
-
-    class VHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView = itemView as TextView
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(android.R.layout.simple_list_item_1, parent, false)
-        return VHolder(view)
-    }
+class SimpleAdapter(private val list: List<String>) : RecyclerView.Adapter<TextViewHolder>() {
 
     override fun getItemCount() = list.size
 
-    override fun onBindViewHolder(holder: VHolder, position: Int) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(parent)
+
+    override fun onBindViewHolder(holder: TextViewHolder, position: Int) {
         val content = list[position]
         holder.textView.text = content
     }
