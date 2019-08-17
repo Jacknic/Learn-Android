@@ -1,0 +1,14 @@
+apply from: '../app/build.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    defaultConfig {
+        applicationId "com.jacknic.android.animation"
+        vectorDrawables.useSupportLibrary = true
+    }
+}
+
+dependencies {
+    implementation project(":starter")
+}
