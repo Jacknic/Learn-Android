@@ -29,8 +29,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$csl_version"
     implementation "androidx.recyclerview:recyclerview:$recycler_version"
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation "androidx.test:runner:$runner_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$junitx_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 }
