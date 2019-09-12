@@ -24,6 +24,9 @@
         <activity
             android:name=".list.ListActivity"
             android:label="List加载" />
+        <activity
+            android:name=".swipe.SwipeActivity"
+            android:label="侧滑删除列表" />
     </application>
 
 </manifest>
