@@ -13,6 +13,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    packagingOptions {
+        exclude 'project.properties'
+        exclude 'proguard-project.txt'
+        exclude 'META-INF/**'
+        exclude 'kotlin/**'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
