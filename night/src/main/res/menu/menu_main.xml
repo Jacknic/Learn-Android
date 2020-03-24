@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jacknic.learn.android.night.MainActivity">
+    <item
+        android:id="@+id/action_mode_night"
+        android:title="@string/night"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_mode_day"
+        android:title="@string/day"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_mode_follow_system"
+        android:title="@string/follow_system"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_mode_auto_battery"
+        android:title="@string/auto_battery"
+        app:showAsAction="never" />
+</menu>

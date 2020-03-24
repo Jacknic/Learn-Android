@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Night</string>
+    <string name="mode">白天模式</string>
+    <string name="night">夜间</string>
+    <string name="day">白天</string>
+    <string name="follow_system">跟随系统</string>
+    <string name="auto_battery">省电模式</string>
+</resources>

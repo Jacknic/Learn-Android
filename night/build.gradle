@@ -1,0 +1,11 @@
+apply from: '../app/build.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.jacknic.android.night"
+    }
+}
+
+dependencies {
+    implementation "com.google.android.material:material:$material_version"
+}
