@@ -1,0 +1,20 @@
+apply from: '../app/build.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.jacknic.android.paging"
+    }
+}
+
+
+def lifecycleVersion = '2.2.0'
+dependencies {
+    implementation "androidx.paging:paging-runtime:3.0.0-alpha01"
+    implementation "com.squareup.retrofit2:retrofit:2.7.2"
+    implementation "com.squareup.retrofit2:converter-gson:2.7.2"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.activity:activity-ktx:1.1.0"
+}
