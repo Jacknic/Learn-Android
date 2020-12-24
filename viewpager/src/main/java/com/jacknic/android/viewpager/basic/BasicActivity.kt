@@ -3,8 +3,8 @@ package com.jacknic.android.viewpager.basic
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
 import com.jacknic.android.viewpager.R
-import kotlinx.android.synthetic.main.activity_basic.*
 import kotlin.math.abs
 
 class BasicActivity : AppCompatActivity() {
@@ -12,6 +12,7 @@ class BasicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic)
+        val pager = findViewById<ViewPager>(R.id.pager)
         pager.pageMargin = 30
         pager.adapter = BasicAdapter(supportFragmentManager)
         pager.setPageTransformer(true) { view: View, value: Float ->

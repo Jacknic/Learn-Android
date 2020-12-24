@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.jacknic.android.navigation.R
 import com.jacknic.android.navigation.util.Preference
-import kotlinx.android.synthetic.main.home_page.*
 
 
 /**
@@ -24,6 +23,7 @@ class HomePage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+        val btnLogout = view.findViewById<View>(R.id.btnLogout)
         btnLogout.setOnClickListener {
             val preference = Preference(requireContext())
             preference.logined = false

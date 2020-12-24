@@ -2,9 +2,9 @@ package com.jacknic.android.animation
 
 import android.graphics.drawable.Animatable
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
-import kotlinx.android.synthetic.main.activity_bitmaps.*
 
 
 /**
@@ -16,6 +16,7 @@ class Vectors : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vectors)
         val animatedVector = AnimatedVectorDrawableCompat.create(this, R.drawable.anim_battery_vector)
+        val ivAnimation = findViewById<ImageView>(R.id.ivAnimation)
         ivAnimation.background = animatedVector
         ivAnimation.setOnClickListener {
             val background = it.background

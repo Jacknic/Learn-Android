@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.*
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_swipe.*
+import com.jacknic.android.recyclerview.R
 import java.util.*
 
 
@@ -13,7 +13,8 @@ class SwipeActivity : AppCompatActivity() {
     val TAG = SwipeActivity::class.java.name
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.jacknic.android.recyclerview.R.layout.activity_swipe)
+        setContentView(R.layout.activity_swipe)
+        val swipeList = findViewById<RecyclerView>(R.id.swipeList)
         val list = mutableListOf<String>()
         for (i in 1..30) {
             list.add("生成数据 $i")

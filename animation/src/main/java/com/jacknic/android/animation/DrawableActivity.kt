@@ -1,8 +1,8 @@
 package com.jacknic.android.animation
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_drawable.*
 
 class DrawableActivity : AppCompatActivity() {
 
@@ -11,6 +11,7 @@ class DrawableActivity : AppCompatActivity() {
         setContentView(R.layout.activity_drawable)
         val drawable = CircleProgressDrawable()
         drawable.level = 6600
+        val tvProgress = findViewById<TextView>(R.id.tvProgress)
         tvProgress.background = drawable
         tvProgress.setOnClickListener {
             if (drawable.isRunning) {

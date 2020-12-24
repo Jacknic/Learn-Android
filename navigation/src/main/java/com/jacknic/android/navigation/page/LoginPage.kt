@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.jacknic.android.navigation.R
 import com.jacknic.android.navigation.util.Preference
-import kotlinx.android.synthetic.main.login_page.*
 
 
 /**
@@ -23,6 +22,7 @@ class LoginPage : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val btnLogin = view.findViewById<View>(R.id.btnLogin)
         btnLogin.setOnClickListener {
             val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
 //            navController.popBackStack()

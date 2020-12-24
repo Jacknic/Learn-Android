@@ -8,8 +8,9 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.Button
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * 文件下载
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val btnDownload = findViewById<Button>(R.id.btnDownload)
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         btnDownload.setOnClickListener {
             val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
             val uri = Uri.parse("https://imtt.dd.qq.com/16891/68CF64B59AB1C0719D2DCB9DB0EFC03A.apk?fsname=com.tencent.mm_7.0.3_1400.apk")
